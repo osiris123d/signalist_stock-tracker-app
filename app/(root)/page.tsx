@@ -7,6 +7,8 @@ import {
 } from "@/lib/constants";
 import {sendDailyNewsSummary} from "@/lib/inngest/functions";
 
+export const runtime = 'edge';
+
 const Home = () => {
     const scriptUrl = `https://s3.tradingview.com/external-embedding/embed-widget-`;
 

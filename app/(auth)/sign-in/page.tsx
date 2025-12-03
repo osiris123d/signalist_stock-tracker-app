@@ -9,6 +9,8 @@ import {toast} from "sonner";
 import {signInEmail} from "better-auth/api";
 import {useRouter} from "next/navigation";
 
+export const runtime = 'edge';
+
 const SignIn = () => {
     const router = useRouter()
     const {
