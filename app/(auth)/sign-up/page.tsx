@@ -11,8 +11,6 @@ import {signUpWithEmail} from "@/lib/actions/auth.actions";
 import {useRouter} from "next/navigation";
 import {toast} from "sonner";
 
-export const runtime = 'edge';
-
 const SignUp = () => {
     const router = useRouter()
     const {
