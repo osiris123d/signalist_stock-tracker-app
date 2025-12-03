@@ -31,6 +31,8 @@ const SignUp = () => {
         mode: 'onBlur'
     }, );
 
+    console.log('Form errors:', errors);
+
     const onSubmit = async (data: SignUpFormData) => {
         console.log('Form submitted with data:', data);
         try {
@@ -56,7 +58,10 @@ const SignUp = () => {
         <>
             <h1 className="form-title">Sign Up & Personalize</h1>
 
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+            <form onSubmit={handleSubmit(onSubmit, (errors) => {
+                console.log('Validation errors:', errors);
+                toast.error('Please fill out all required fields correctly');
+            })} className="space-y-5">
                 <InputField
                     name="fullName"
                     label="Full Name"
